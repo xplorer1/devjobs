@@ -2745,7 +2745,7 @@ class StatikComponent extends React.Component {
 			        </div>
 			    </div>
 			    {/* jp Best deals Wrapper End */}
-			    {/* jp Client Wrapper Start */}
+			    {/* jp Client Wrapper Start 
 			    <div className="jp_client_slider_main_wrapper">
 			        <div className="container">
 			            <div className="row">
@@ -2796,7 +2796,7 @@ class StatikComponent extends React.Component {
 			                </div>
 			            </div>
 			        </div>
-			    </div>
+			    </div> */}
 			    {/* jp Client Wrapper End */}
 			    {/* jp pricing Wrapper Start */}
 			    <div className="jp_pricing_main_wrapper">

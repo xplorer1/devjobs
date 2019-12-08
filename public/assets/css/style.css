@@ -479,7 +479,7 @@ ul{
 }
 .mainmenu:after{
 	content: '';
-    border: 1px solid #ffffff21;
+    border: none;
     width: 1px;
     height: 116px;
     position: absolute;
