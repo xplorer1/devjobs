@@ -22,7 +22,9 @@ class Login extends React.Component {
 			                    <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-xs hidden-sm full_width">
 			                        <div className="gc_header_wrapper">
 			                            <div className="gc_logo">
-			                                <a href="index.html"><img src="assets/images/header/logo2.png" alt="Logo" title="Job Pro" className="img-responsive" /></a>
+			                            	<Link to="/" className="">
+		                                		<img src="assets/images/header/logo2.png" alt="Logo" title="Job Pro" className="img-responsive" />
+		                                	</Link>	
 			                            </div>
 			                        </div>
 			                    </div>			                    
