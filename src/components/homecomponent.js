@@ -278,7 +278,8 @@ class StatikComponent extends React.Component {
 			                                                            <a href="contact.html">Contact</a>
 			                                                        </li>
 																	<li>
-			                                                            <a href="register.html">Sign Up</a>
+																		<Link to="/signup" className="">Sign Up</Link>
+			                                                            
 			                                                        </li>
 																	<li>
 			                                                            <a href="login.html">Login</a>
@@ -304,8 +305,13 @@ class StatikComponent extends React.Component {
 			                    <div className="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
 			                        <div className="jp_navi_right_btn_wrapper">
 			                            <ul>
-			                                <li><a href="register.html"><i className="fa fa-user"></i>&nbsp; SIGN UP</a></li>
-			                                <li><a href="login.html"><i className="fa fa-sign-in"></i>&nbsp; LOGIN</a></li>
+			                                <li>
+			                                	<Link to="/signup" className=""><i className="fa fa-user"></i>&nbsp;Sign Up</Link>
+			                                </li>
+			                                <li>
+			                                	<Link to="/login" className=""><i className="fa fa-sign-in"></i>&nbsp;Login</Link>
+			                                	
+			                                </li>
 			                            </ul>
 			                        </div>
 			                    </div>
@@ -2745,59 +2751,6 @@ class StatikComponent extends React.Component {
 			        </div>
 			    </div>
 			    {/* jp Best deals Wrapper End */}
-			    {/* jp Client Wrapper Start 
-			    <div className="jp_client_slider_main_wrapper">
-			        <div className="container">
-			            <div className="row">
-			                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			                    <div className="jp_first_client_slider_wrapper">
-			                        <div className="jp_first_client_slider_img_overlay"></div>
-			                        <div className="jp_client_heading_wrapper">
-			                            <h2>What Clients Say?</h2>
-			                        </div>
-			                        <div className="jp_client_slider_wrapper">
-			                            <div className="owl-carousel owl-theme">
-			                                <div className="item">
-			                                    <div className="jp_client_slide_show_wrapper">
-			                                        <div className="jp_client_slider_img_wrapper">
-			                                            <img src="assets/images/content/client_slider_img.jpg" alt="client_img" />
-			                                        </div>
-			                                        <div className="jp_client_slider_cont_wrapper">
-			                                            <p>“Sollicitudin, lorem quis bibendum en auctor, aks consequat ipsum, nec a sagittis sem nibh id elit. Duis sed odo nibh vulputate Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin”</p>
-			                                            <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star-o"></i><span>~ Jeniffer Doe &nbsp;<b>(Ui Designer)</b></span>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                                <div className="item">
-			                                    <div className="jp_client_slide_show_wrapper">
-			                                        <div className="jp_client_slider_img_wrapper">
-			                                            <img src="assets/images/content/client_slider_img.jpg" alt="client_img" />
-			                                        </div>
-			                                        <div className="jp_client_slider_cont_wrapper">
-			                                            <p>“Sollicitudin, lorem quis bibendum en auctor, aks consequat ipsum, nec a sagittis sem nibh id elit. Duis sed odo nibh vulputate Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin”</p>
-			                                            <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star-o"></i><span>~ Jeniffer Doe &nbsp;<b>(Ui Designer)</b></span>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                                <div className="item">
-			                                    <div className="jp_client_slide_show_wrapper">
-			                                        <div className="jp_client_slider_img_wrapper">
-			                                            <img src="assets/images/content/client_slider_img.jpg" alt="client_img" />
-			                                        </div>
-			                                        <div className="jp_client_slider_cont_wrapper">
-			                                            <p>“Sollicitudin, lorem quis bibendum en auctor, aks consequat ipsum, nec a sagittis sem nibh id elit. Duis sed odo nibh vulputate Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin”</p>
-			                                            <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star-o"></i><span>~ Jeniffer Doe &nbsp;<b>(Ui Designer)</b></span>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div> */}
-			    {/* jp Client Wrapper End */}
 			    {/* jp pricing Wrapper Start */}
 			    <div className="jp_pricing_main_wrapper">
 			        <div className="container">
@@ -2905,32 +2858,6 @@ class StatikComponent extends React.Component {
 			        </div>
 			    </div>
 			    {/* jp pricing Wrapper End */}
-			    {/* jp downlord Wrapper Start */}
-			    <div className="jp_downlord_main_wrapper">
-			        <div className="jp_downlord_img_overlay"></div>
-			        <div className="container">
-			            <div className="row">
-			                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 hidden-sm hidden-xs">
-			                    <div className="jp_down_mob_img_wrapper">
-			                        <img src="assets/images/content/mobail.png" alt="mobail_img" />
-			                    </div>
-			                </div>
-			                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			                    <div className="ss_download_wrapper_details">
-			                        <h1><span>Download</span><br/>Job Portal App Now!</h1>
-			                        <p>Fast, Simple & Delightful. All it takes is 30 seconds to Download.</p>
-			                        <a  className="ss_appstore"><span><i className="fa fa-apple" aria-hidden="true"></i></span> App Store</a>
-			                        <a  className="ss_playstore"><span><i className="fa fa-android" aria-hidden="true"></i></span> Play Store</a>
-			                    </div>
-			                </div>
-			                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 visible-sm visible-xs">
-			                    <div className="jp_down_mob_img_wrapper">
-			                        <img src="assets/images/content/mobail.png" className="img-responsive" alt="mobail_img" />
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
 			    {/* jp downlord Wrapper End */}
 			    {/* jp Newsletter Wrapper Start */}
 			    <div className="jp_main_footer_img_wrapper">
