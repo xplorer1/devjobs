@@ -13,40 +13,6 @@ class Login extends React.Component {
 	render() {
 		return (
 			<article>
-			    <div className="jp_top_header_main_wrapper">
-			        <div className="container-fluid">
-			            <div className="row">
-			                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			                    <div className="jp_top_header_left_wrapper">
-			                        <div className="jp_top_header_left_cont">
-			                            <p><i className="fa fa-phone"></i> &nbsp;Phone &nbsp;+123456789</p>
-			                            <p className=""><i className="fa fa-envelope"></i> &nbsp;Email :&nbsp;<a href="#">Email@example.com</a></p>
-			                        </div>
-			                    </div>
-			                </div>
-			                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			                    <div className="jp_top_header_right_wrapper">
-			                        <div className="jp_top_header_right_cont">
-			                            <ul>
-			                                <li><a href="register.html"><i className="fa fa-user"></i>&nbsp; SIGN UP</a></li>
-			                                <li><a href="login.html"><i className="fa fa-sign-in"></i>&nbsp; LOGIN</a></li>
-			                            </ul>
-			                        </div>
-			                        <div className="jp_top_header_right__social_cont">
-			                            <ul>
-			                                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			                                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			                                <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
-			                                <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-			                                <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-			                                <li><a href="#"><i className="fa fa-vimeo"></i></a></li>
-			                            </ul>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
 			    {/* Top Header Wrapper End */}
 			    {/* Header Wrapper Start */}
 			    <div className="jp_top_header_img_wrapper">
@@ -73,8 +39,6 @@ class Login extends React.Component {
 						<div className="container">
 							<div className="row">
 								<div className="col-md-8 col-md-offset-2">
-									{/* login_wrapper */}
-									<h1>LOGIN TO YOUR ACCOUNT</h1>
 									<div className="login_wrapper">
 										<div className="row">
 											<div className="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -108,12 +72,10 @@ class Login extends React.Component {
 											<a href="#" className="btn btn-primary login_btn"> Login </a>
 										</div>
 										<div className="login_message">
-											<p>Don’t have an account ? <a href="#"> Register Now </a> </p>
+											<p>Don’t have an account ? <Link to="/signup" className="">Register Now</Link>
+											</p>
 										</div>
 									</div>
-									<p>In case you are using a public/shared computer we recommend that
-			you logout to prevent any un-authorized access to your account</p>
-									{/* /.login_wrapper*/}
 								</div>
 							</div>
 						</div>
@@ -129,7 +91,7 @@ class Login extends React.Component {
 			                <div className="row">
 			                    <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			                        <div className="jp_newsletter_text">
-			                            <img src="images/content/news_logo.png" className="img-responsive" alt="news_logo" />
+			                            <img src="assets/images/content/news_logo.png" className="img-responsive" alt="news_logo" />
 			                        </div>
 			                    </div>
 			                    <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">

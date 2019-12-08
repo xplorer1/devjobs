@@ -169,10 +169,11 @@ class SignUp extends React.Component {
 			                                    </div>
 
 			                                    <div className="login_btn_wrapper register_btn_wrapper login_wrapper ">
-			                                        <a href="#" className="btn btn-primary login_btn"> register </a>
+			                                        <a href="#" className="btn btn-primary login_btn"> Register </a>
 			                                    </div>
 			                                    <div className="login_message">
-			                                        <p>Already a member? <a href="#"> Login Here </a> </p>
+			                                        <p>Already a member? <Link to="/login" className="">Login Here</Link>
+			                                        </p>
 			                                    </div>
 
 			                                </div>
