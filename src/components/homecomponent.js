@@ -61,7 +61,7 @@ class StatikComponent extends React.Component {
 			                                    </li>
 
 			                                    <li className="has-mega gc_main_navigation">
-			                                    	<Link to="/browsejobs"  className="gc_main_navigation">Browse Jobs</Link>
+			                                    	<Link to="/joblisting"  className="gc_main_navigation">Browse Jobs</Link>
 			                                    </li>
 
 			                                    <li className="parent gc_main_navigation">
