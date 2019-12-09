@@ -71,7 +71,7 @@ class Login extends React.Component {
 											</a>
 										</div>
 										<div className="login_btn_wrapper">
-											<a href="#" className="btn btn-primary login_btn"> Login </a>
+											<Link to="/profile" className="btn btn-primary login_btn"> Login </Link>
 										</div>
 										<div className="login_message">
 											<p>Don’t have an account ? <Link to="/signup" className="">Register Now</Link>
@@ -112,7 +112,7 @@ class Login extends React.Component {
 			                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			                        <div className="jp_footer_logo_wrapper">
 			                            <div className="jp_footer_logo">
-			                                <a href="#"><img src="assets/images/content/resume_logo.png" alt="footer_logo"/></a>
+			                                <Link to="/" ><img src="assets/images/content/resume_logo.png" alt="footer_logo"/></Link>
 			                            </div>
 			                        </div>
 			                    </div>

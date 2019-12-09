@@ -56,29 +56,24 @@ class StatikComponent extends React.Component {
 			                            {/*<!-- mainmenu start -->*/}
 			                            <div className="mainmenu">
 			                                 <ul className="float_left">
-			                                    <li className="has-mega gc_main_navigation"><a  className="gc_main_navigation">About Us</a>
+			                                    <li className="has-mega gc_main_navigation">
+			                                    	<Link to="/about" className="gc_main_navigation">About Us</Link>
 			                                    </li>
 
-			                                    <li className="has-mega gc_main_navigation"><a  className="gc_main_navigation">Browse Jobs</a>
+			                                    <li className="has-mega gc_main_navigation">
+			                                    	<Link to="/browsejobs"  className="gc_main_navigation">Browse Jobs</Link>
 			                                    </li>
 
-			                                    <li className="parent gc_main_navigation"><a  className="gc_main_navigation">Browse Companies</a>
-			                                        
+			                                    <li className="parent gc_main_navigation">
+			                                    	<Link to="/browsecompanies"  className="gc_main_navigation">Browse Companies</Link>
 			                                    </li>
-												<li className="has-mega gc_main_navigation"><a  className="gc_main_navigation">Contact Us</a>
-			                                        {/*<!-- mega menu start -->*
-			                                        <ul>
-			                                            <li className="parent"><a href="404_error.html">404</a></li>
-			                                            <li className="parent"><a href="add_postin.html">Add-Posting</a></li>
-														<li className="parent"><a href="login.html">Login</a></li>
-			                                            <li className="parent"><a href="register.html">Register</a></li>
-			                                            <li className="parent"><a href="pricing.html">Pricing</a></li>
-			                                        </ul> */}
+												<li className="has-mega gc_main_navigation">
+													<Link to="/contactus"  className="gc_main_navigation">Contact Us</Link>
 			                                    </li>
-			                                    <li className="has-mega gc_main_navigation"><a  className="gc_main_navigation">  Blog</a>
-			                                        
+			                                    <li className="has-mega gc_main_navigation">
+			                                    	<Link to="/signup" className="gc_main_navigation">Blog</Link>			                                        
 			                                    </li>
-			                                    <li className="gc_main_navigation parent"><a href="contact.html" className="gc_main_navigation">Contact</a></li>
+			                                    
 			                                </ul>
 			                            </div>
 			                            {/*<!-- mainmenu end -->
