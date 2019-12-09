@@ -71,7 +71,7 @@ class Login extends React.Component {
 											</a>
 										</div>
 										<div className="login_btn_wrapper">
-											<Link to="/profile" className="btn btn-primary login_btn"> Login </Link>
+											<Link to="/candidateprofile" className="btn btn-primary login_btn"> Login </Link>
 										</div>
 										<div className="login_message">
 											<p>Don’t have an account ? <Link to="/signup" className="">Register Now</Link>

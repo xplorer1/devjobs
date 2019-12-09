@@ -5,6 +5,7 @@ import About from "./components/aboutcomponent";
 import {Home} from "./components/homecomponent";
 import {SignUp} from "./components/signup";
 import {Login} from "./components/login";
+import {CandidateProfile} from "./components/candidate/candidateprofile";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
 	    		<Route path='/signup' component={SignUp} />
 	    		<Route path='/login' component={Login} />
 				<Route path='/about' component = {About} />
+				<Route path='/candidateprofile' component = {CandidateProfile} />
 			</Switch>
         </Router>
     )
