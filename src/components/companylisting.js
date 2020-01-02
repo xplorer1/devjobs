@@ -21,8 +21,8 @@ class CompanyListing extends React.Component {
                     </button>
                     
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="index.html">
-                            <img src="assets/img/logo.png" className="logo logo-scrolled" alt="" />
+                        <a className="navbar-brand mt-4 text-white" href="index.html">
+                            DevJobs
                         </a>
                     </div>
 
