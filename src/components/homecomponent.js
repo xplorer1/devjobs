@@ -6,30 +6,13 @@ class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {showLoader: true};
-
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleFocus = this.handleFocus.bind(this);
-		this.handleInput = this.handleInput.bind(this);
-		
-	}
-
-	handleBlur(e) {
-		console.log("window: ", e)
-	}
-
-	handleFocus() {
-		console.log("Yo man! I handle focus in this clutter of a site.")
-	}
-
-	handleInput() {
-		console.log("Yo nigga! I handle all input in this clutter of a site.")
 	}
 
 	render() {
 		return (
 			<article>
 				
-			    <div className="Loader"></div>
+			    {/*<div className="Loader"></div>*/}
 
 			    <div className="wrapper">
 			        <nav className="navbar navbar-default navbar-fixed navbar-transparent white bootsnav">
@@ -51,7 +34,7 @@ class Home extends React.Component {
 			                        </li>
 
 			                        <li>
-			                        	<Link className="navbar-brand text-white mt-4" to="/companylisting">
+			                        	<Link className="navbar-brand text-white" to="/companylisting">
 					                    	Browse Companies
 					                    </Link>
 			                   		</li>

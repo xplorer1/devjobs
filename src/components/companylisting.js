@@ -9,7 +9,7 @@ class CompanyListing extends React.Component {
     render() {
         return (
             <article>
-                <div className="Loader"></div>
+                {/*<div className="Loader"></div>*/}
         <div className="wrapper">  
             
             
@@ -30,89 +30,11 @@ class CompanyListing extends React.Component {
                     <div className="collapse navbar-collapse" id="navbar-menu">
                         <ul className="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
                             <li className="active"><input type="text" className="form-control" placeholder="Find Freelancer" /></li>
-                            <li className="dropdown megamenu-fw"><a href="#" className="dropdown-toggle" data-toggle="dropdown">Brows</a>
-                                <ul className="dropdown-menu megamenu-content" role="menu">
-                                    <li>
-                                        <div className="row">
-                                            <div className="col-menu col-md-3">
-                                                <h6 className="title">Main Pages</h6>
-                                                <div className="content">
-                                                    <ul className="menu-col">
-                                                        <li><a href="index.html">Home Page 1</a></li>
-                                                        <li><a href="index-2.html">Home Page 2</a></li>
-                                                        <li><a href="index-3.html">Home Page 3</a></li>
-                                                        <li><a href="index-4.html">Home Page 4</a></li>
-                                                        <li><a href="index-5.html">Home Page 5</a></li>
-                                                        <li><a href="freelancing.html">Freelancing</a></li>
-                                                        <li><a href="signin-signup.html">Sign In / Sign Up</a></li>
-                                                        <li><a href="search-job.html">Search Job</a></li>
-                                                        <li><a href="accordion.html">Accordion</a></li>
-                                                        <li><a href="tab.html">Tab Style</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="col-menu col-md-3">
-                                                <h6 className="title">For Candidate</h6>
-                                                <div className="content">
-                                                    <ul className="menu-col">
-                                                        <li><a href="browse-jobs.html">Browse Jobs</a></li>
-                                                        <li><a href="browse-company.html">Browse Companies</a></li>
-                                                        <li><a href="browse-jobs-grid.html">Job In Grid</a></li>
-                                                        <li><a href="create-resume.html">Create Resume</a></li>
-                                                        <li><a href="company-detail.html">Company Detail</a></li>
-                                                        <li><a href="search-new.html">New Search Job</a></li>
-                                                        <li><a href="advance-search.html">Advance Search Job</a></li>
-                                                        <li><a href="advance-search-2.html">Advance Search Job 2</a></li>
-                                                        <li><a href="job-detail.html">Job Detail</a></li>
-                                                        <li><a href="new-job-detail.html">New Job Detail</a></li>
-                                                                                                                
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="col-menu col-md-3">
-                                                <h6 className="title">For Employer</h6>
-                                                <div className="content">
-                                                    <ul className="menu-col">
-                                                        <li><a href="create-job.html">Create Job</a></li>
-                                                        <li><a href="create-company.html">Create Company</a></li>
-                                                        <li><a href="manage-company.html">Manage Company</a></li>
-                                                        <li><a href="manage-candidate.html">Browse Candidate</a></li>
-                                                        <li><a href="manage-employee.html">Manage Employee</a></li>
-                                                        <li><a href="browse-resume.html">Browse Resume</a></li>
-                                                        <li><a href="candidate-profile.html">Candidate Profile</a></li>
-                                                        <li><a href="candidate-detail.html">New Candidate Detail</a></li>
-                                                        <li><a href="employer-profile.html">Employer Profile</a></li>
-                                                        <li><a href="manage-resume.html">Manage Resume</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>    
-                                            <div className="col-menu col-md-3">
-                                                <h6 className="title">Extra Pages <span className="new-offer">New</span></h6>
-                                                <div className="content">
-                                                    <ul className="menu-col">
-                                                        <li><a href="top-candidate-detail.html">Top Candidate detail</a></li>
-                                                        <li><a href="job-apply-detail.html">New Apply Job</a></li>
-                                                        <li><a href="payment-methode.html">Payment Methode</a></li>
-                                                        <li><a href="new-login-signup.html">New LogIn / SignUp</a></li>
-                                                        <li><a href="popular-jobs.html">Popular Jobs</a></li>
-                                                        <li><a href="top-candidate.html">Top candidate</a></li>
-                                                        <li><a href="top-candidate-2.html">Top candidate 2</a></li>
-                                                        <li><a href="premium-candidate.html">Premium Candidate</a></li>
-                                                        <li><a href="premium-candidate-detail.html">Premium Candidate Detail</a></li>
-                                                        <li><a href="blog-detail.html">Blog detail</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">Blog</a></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li><a href="login.html"><i className="fa fa-pencil" aria-hidden="true"></i>SignIn</a></li>
-                            <li><a href="pricing.html"><i className="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
-                            <li className="left-br"><a href="javascript:void(0)"  data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a></li>
+                            <li><a href="#"><i className="fa fa-pencil" aria-hidden="true"></i>SignIn</a></li>
+                            <li><a href="#"><i className="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
+                            <li className="left-br"><a href="#"  data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a></li>
                         </ul>
                     </div>
                 </div>   
@@ -123,7 +45,7 @@ class CompanyListing extends React.Component {
            
             <section className="inner-header-title" style={{backgroundImage: "url('assets/img/banner-10.jpg')"}}>
                 <div className="container">
-                    <h1>Browse Company</h1>
+                    <h1>Browse Companies</h1>
                 </div>
             </section>
             <div className="clearfix"></div>
@@ -437,33 +359,15 @@ class CompanyListing extends React.Component {
             </section>
             
             <footer className="footer">
-                <div className="row lg-menu">
-                    <div className="container">
-                        <div className="col-md-4 col-sm-4">
-                            <img src="assets/img/footer-logo.png" className="img-responsive" alt="" /> 
-                        </div>
-                        <div className="col-md-8 co-sm-8 pull-right">
-                            <ul>
-                                <li><a href="index.html" title="">Home</a></li>
-                                <li><a href="blog.html" title="">Blog</a></li>
-                                <li><a href="404.html" title="">404</a></li>
-                                <li><a href="faq.html" title="">FAQ</a></li>
-                                <li><a href="contact.html" title="">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div className="row no-padding">
                     <div className="container">
                         <div className="col-md-3 col-sm-12">
                             <div className="footer-widget">
-                            <h3 className="widgettitle widget-title">About Job Stock</h3>
+                            <h3 className="widgettitle widget-title">About DevJobs</h3>
                             <div className="textwidget">
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                            <p>7860 North Park Place<br />
-                            San Francisco, CA 94120</p>
-                            <p><strong>Email:</strong> <a href="https://codeminifier.com/cdn-cgi/l/email-protection" className="__cf_email__" data-cfemail="6734121717081513270406150202150302140c">[email&#160;protected]</a></p>
-                            <p><strong>Call:</strong> <a href="tel:+15555555555">555-555-1234</a></p>
+                            
+                            <p>286 Bornu Way,<br />
+                            Yaba, Lagos.</p>
                             <ul className="footer-social">
                                 <li><a href="#"><i className="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
@@ -477,33 +381,15 @@ class CompanyListing extends React.Component {
                         
                         <div className="col-md-3 col-sm-4">
                             <div className="footer-widget">
-                            <h3 className="widgettitle widget-title">All Navigation</h3>
-                            <div className="textwidget">
-                                <div className="textwidget">
-                                <ul className="footer-navigation">
-                                    <li><a href="manage-company.html" title="">Front-end Design</a></li>
-                                    <li><a href="manage-company.html" title="">Android Developer</a></li>
-                                    <li><a href="manage-company.html" title="">CMS Development</a></li>
-                                    <li><a href="manage-company.html" title="">PHP Development</a></li>
-                                    <li><a href="manage-company.html" title="">IOS Developer</a></li>
-                                    <li><a href="manage-company.html" title="">Iphone Developer</a></li>
-                                </ul>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-md-3 col-sm-4">
-                            <div className="footer-widget">
                             <h3 className="widgettitle widget-title">All Categories</h3>
                             <div className="textwidget">
                                 <ul className="footer-navigation">
-                                    <li><a href="manage-company.html" title="">Front-end Design</a></li>
-                                    <li><a href="manage-company.html" title="">Android Developer</a></li>
-                                    <li><a href="manage-company.html" title="">CMS Development</a></li>
-                                    <li><a href="manage-company.html" title="">PHP Development</a></li>
-                                    <li><a href="manage-company.html" title="">IOS Developer</a></li>
-                                    <li><a href="manage-company.html" title="">Iphone Developer</a></li>
+                                    <li><a href="#" title="">Front-end Design</a></li>
+                                    <li><a href="#" title="">Android Developer</a></li>
+                                    <li><a href="#" title="">CMS Development</a></li>
+                                    <li><a href="#" title="">PHP Development</a></li>
+                                    <li><a href="#" title="">IOS Developer</a></li>
+                                    <li><a href="#" title="">Iphone Developer</a></li>
                                 </ul>
                             </div>
                             </div>
@@ -511,7 +397,7 @@ class CompanyListing extends React.Component {
                             
                         <div className="col-md-3 col-sm-4">
                             <div className="footer-widget">
-                            <h3 className="widgettitle widget-title">Connect Us</h3>
+                            <h3 className="widgettitle widget-title">Connect With Us</h3>
                             <div className="textwidget">
                             <form className="footer-form">
                                 <input type="text" className="form-control" placeholder="Your Name" /> 
@@ -526,7 +412,7 @@ class CompanyListing extends React.Component {
                 </div>
                 <div className="row copyright">
                     <div className="container">
-                        <p>Copyright Job Stock © 2019. All Rights Reserved </p>
+                        <p>Copyright DevJobs © 2019. All Rights Reserved </p>
                     </div>
                 </div>
             </footer>
@@ -539,7 +425,7 @@ class CompanyListing extends React.Component {
                             <div className="tab" role="tabpanel">
                             
                             <ul className="nav nav-tabs" role="tablist">
-                                <li role="presentation" className="active"><a href="#login" role="tab" data-toggle="tab">Sign In</a></li>
+                                <li role="presentation" className="active"><a href="#" role="tab" data-toggle="tab">Sign In</a></li>
                                 <li role="presentation"><a href="#register" role="tab" data-toggle="tab">Sign Up</a></li>
                             </ul>
                             
