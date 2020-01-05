@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Utilities} from "./home";
 
 class JobListing extends React.Component {
     constructor() {
@@ -9,112 +10,10 @@ class JobListing extends React.Component {
     render() {
         return (
             <article>
-                <div className="Loader"></div>
+                {/*<div className="Loader"></div>*/}
                 <div className="wrapper">  
         
-                    <nav className="navbar navbar-default navbar-fixed navbar-light white bootsnav">
-
-                        <div className="container">            
-                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                                <i className="fa fa-bars"></i>
-                            </button>
-                        
-                            <div className="navbar-header">
-                                <a className="navbar-brand" href="index.html">
-                                    <img src="assets/img/logo.png" className="logo logo-scrolled" alt="" />
-                                </a>
-                            </div>
-
-                            <div className="collapse navbar-collapse" id="navbar-menu">
-                                <ul className="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li className="active"><input type="text" className="form-control" placeholder="Find Freelancer" /></li>
-                                    <li className="dropdown megamenu-fw"><a href="#" className="dropdown-toggle" data-toggle="dropdown">Browse</a>
-                                        <ul className="dropdown-menu megamenu-content" role="menu">
-                                            <li>
-                                                <div className="row">
-                                                    <div className="col-menu col-md-3">
-                                                        <h6 className="title">Main Pages</h6>
-                                                        <div className="content">
-                                                            <ul className="menu-col">
-                                                                <li><a href="index.html">Home Page 1</a></li>
-                                                                <li><a href="index-2.html">Home Page 2</a></li>
-                                                                <li><a href="index-3.html">Home Page 3</a></li>
-                                                                <li><a href="index-4.html">Home Page 4</a></li>
-                                                                <li><a href="index-5.html">Home Page 5</a></li>
-                                                                <li><a href="freelancing.html">Freelancing</a></li>
-                                                                <li><a href="signin-signup.html">Sign In / Sign Up</a></li>
-                                                                <li><a href="search-job.html">Search Job</a></li>
-                                                                <li><a href="accordion.html">Accordion</a></li>
-                                                                <li><a href="tab.html">Tab Style</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-menu col-md-3">
-                                                        <h6 className="title">For Candidate</h6>
-                                                        <div className="content">
-                                                            <ul className="menu-col">
-                                                                <li><a href="browse-jobs.html">Browse Jobs</a></li>
-                                                                <li><a href="browse-company.html">Browse Companies</a></li>
-                                                                <li><a href="browse-jobs-grid.html">Job In Grid</a></li>
-                                                                <li><a href="create-resume.html">Create Resume</a></li>
-                                                                <li><a href="company-detail.html">Company Detail</a></li>
-                                                                <li><a href="search-new.html">New Search Job</a></li>
-                                                                <li><a href="advance-search.html">Advance Search Job</a></li>
-                                                                <li><a href="advance-search-2.html">Advance Search Job 2</a></li>
-                                                                <li><a href="job-detail.html">Job Detail</a></li>
-                                                                <li><a href="new-job-detail.html">New Job Detail</a></li>
-                                                                                                                        
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-menu col-md-3">
-                                                        <h6 className="title">For Employer</h6>
-                                                        <div className="content">
-                                                            <ul className="menu-col">
-                                                                <li><a href="create-job.html">Create Job</a></li>
-                                                                <li><a href="create-company.html">Create Company</a></li>
-                                                                <li><a href="manage-company.html">Manage Company</a></li>
-                                                                <li><a href="manage-candidate.html">Browse Candidate</a></li>
-                                                                <li><a href="manage-employee.html">Manage Employee</a></li>
-                                                                <li><a href="browse-resume.html">Browse Resume</a></li>
-                                                                <li><a href="candidate-profile.html">Candidate Profile</a></li>
-                                                                <li><a href="candidate-detail.html">New Candidate Detail</a></li>
-                                                                <li><a href="employer-profile.html">Employer Profile</a></li>
-                                                                <li><a href="manage-resume.html">Manage Resume</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>    
-                                                    <div className="col-menu col-md-3">
-                                                        <h6 className="title">Extra Pages <span className="new-offer">New</span></h6>
-                                                        <div className="content">
-                                                            <ul className="menu-col">
-                                                                <li><a href="top-candidate-detail.html">Top Candidate detail</a></li>
-                                                                <li><a href="job-apply-detail.html">New Apply Job</a></li>
-                                                                <li><a href="payment-methode.html">Payment Methode</a></li>
-                                                                <li><a href="new-login-signup.html">New LogIn / SignUp</a></li>
-                                                                <li><a href="popular-jobs.html">Popular Jobs</a></li>
-                                                                <li><a href="top-candidate.html">Top candidate</a></li>
-                                                                <li><a href="top-candidate-2.html">Top candidate 2</a></li>
-                                                                <li><a href="premium-candidate.html">Premium Candidate</a></li>
-                                                                <li><a href="premium-candidate-detail.html">Premium Candidate Detail</a></li>
-                                                                <li><a href="blog-detail.html">Blog detail</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                </ul>
-                                <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li><a href="login.html"><i className="fa fa-pencil" aria-hidden="true"></i>SignIn</a></li>
-                                    <li><a href="pricing.html"><i className="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
-                                    <li className="left-br"><a href="javascript:void(0)"  data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a></li>
-                                </ul>
-                            </div>
-                        </div>   
-                    </nav>
+                    <Utilities.Nav />
             
                     <div className="clearfix"></div>
                     <section className="inner-header-title" style={{backgroundImage: "url('assets/img/banner-10.jpg')"}}>
@@ -139,14 +38,17 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-3 col-sm-3">
                                             <select className="form-control" id="j-category">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">Information Technology</option>
-                                                <option value="2">Mechanical</option>
-                                                <option value="3">Hardware</option>
-                                                <option value="4">Hospitality & Tourism</option>
-                                                <option value="5">Education & Training</option>
-                                                <option value="6">Government & Public</option>
-                                                <option value="7">Architecture</option>
+                                                <option value="">Job Type</option>
+                                                <option value="1">ReactJs Developer</option>
+                                                <option value="2">NodeJs Developer</option>
+                                                <option value="3">Anguar Developer</option>
+                                                <option value="4">Java Developer</option>
+                                                <option value="5">Python Developer</option>
+                                                <option value="6">Quality Assurance</option>
+                                                <option value="7">VueJs Developer</option>
+                                                <option value="7">C# Developer</option>
+                                                <option value="7">Project Manager</option>
+                                                <option value="7">UI/UX Designer</option>
                                             </select>
 
                                         </div>
@@ -166,7 +68,7 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-1.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Digital Marketing Manager</a></h3>
+                                                    <h3><a href="job-apply-detail.html">Java Developer</a></h3>
                                                     <p>
                                                         <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>
                                                         <span className="job-type cl-success bg-trans-success">Full Time</span>
@@ -176,16 +78,16 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
                                             <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
+                                                <Link to="/job" className="btn btn-default">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
-                                    <span className="tg-themetag tg-featuretag">Premium</span>
+                                
                                 </article>
                             </div>
                         
@@ -198,7 +100,7 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-2.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Compensation Analyst</a></h3>
+                                                    <h3><a href="job-apply-detail.html">Product Manager</a></h3>
                                                     <p>
                                                         <span>Google</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$810 - 900</span>
                                                         <span className="job-type bg-trans-warning cl-warning">Part Time</span>
@@ -208,7 +110,7 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -229,9 +131,9 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-3.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Investment Banker</a></h3>
+                                                    <h3><a href="job-apply-detail.html">ReactJs Developer</a></h3>
                                                     <p>
-                                                        <span>Honda</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$800 - 910</span>
+                                                        <span>Softcom</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$800 - 910</span>
                                                         <span className="job-type bg-trans-primary cl-primary">Freelancer</span>
                                                     </p>
                                                 </div>
@@ -239,7 +141,7 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -248,7 +150,6 @@ class JobListing extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <span className="tg-themetag tg-featuretag">Premium</span>
                                 </article>
                             </div>
                             
@@ -261,7 +162,7 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-4.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Financial Analyst</a></h3>
+                                                    <h3><a href="job-apply-detail.html">Data Analyst</a></h3>
                                                     <p>
                                                         <span>Microsoft</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$580 - 600</span>
                                                         <span className="job-type bg-trans-success cl-success">Full Time</span>
@@ -271,7 +172,7 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -292,7 +193,7 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-5.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Service Representative</a></h3>
+                                                    <h3><a href="job-apply-detail.html">UI/UX Designer</a></h3>
                                                     <p>
                                                         <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$800 - 900</span>
                                                         <span className="job-type bg-trans-denger cl-danger">Enternship</span>
@@ -302,7 +203,7 @@ class JobListing extends React.Component {
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -311,7 +212,6 @@ class JobListing extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <span className="tg-themetag tg-featuretag">Premium</span>
                                 </article>
                             </div>
                             
@@ -324,17 +224,17 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-6.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Chief Executive Officer</a></h3>
+                                                    <h3><a href="job-apply-detail.html">Anguar Developer</a></h3>
                                                     <p>
                                                         <span>Google</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$510 - 700</span>
-                                                        <span className="job-type bg-trans-success cl-success">Full Time</span>
+                                                        <span className="job-type bg-trans-success cl-success">Remote</span>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -355,17 +255,17 @@ class JobListing extends React.Component {
                                                     <a href="job-detail.html"><img src="assets/img/com-7.jpg" className="img-responsive" alt="" /></a>
                                                 </div>
                                                 <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Administrative Manager</a></h3>
+                                                    <h3><a href="job-apply-detail.html">Python Developer</a></h3>
                                                     <p>
                                                         <span>Honda</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$700 - 800</span>
-                                                        <span className="job-type bg-trans-warning cl-warning">Part Time</span>
+                                                        <span className="job-type bg-trans-warning cl-warning">Remote</span>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-4 col-sm-4">
                                             <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>QBL Park, C40</p>
+                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-2">
@@ -374,7 +274,6 @@ class JobListing extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <span className="tg-themetag tg-featuretag">Premium</span>
                                 </article>
                             </div>
                             
@@ -393,102 +292,7 @@ class JobListing extends React.Component {
                         </div>
                     </section>
             
-                    <footer className="footer">
-                        <div className="row lg-menu">
-                            <div className="container">
-                                <div className="col-md-4 col-sm-4">
-                                    <img src="assets/img/footer-logo.png" className="img-responsive" alt="" /> 
-                                </div>
-                                <div className="col-md-8 co-sm-8 pull-right">
-                                    <ul>
-                                        <li><a href="index.html" title="">Home</a></li>
-                                        <li><a href="blog.html" title="">Blog</a></li>
-                                        <li><a href="404.html" title="">404</a></li>
-                                        <li><a href="faq.html" title="">FAQ</a></li>
-                                        <li><a href="contact.html" title="">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="row no-padding">
-                            <div className="container">
-                                <div className="col-md-3 col-sm-12">
-                                    <div className="footer-widget">
-                                    <h3 className="widgettitle widget-title">About Job Stock</h3>
-                                    <div className="textwidget">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                                    <p>7860 North Park Place<br />
-                                    San Francisco, CA 94120</p>
-                                    <p><strong>Email:</strong> <a href="https://codeminifier.com/cdn-cgi/l/email-protection" className="__cf_email__" data-cfemail="98cbede8e8f7eaecd8fbf9eafdfdeafcfdebf3">[email&#160;protected]</a></p>
-                                    <p><strong>Call:</strong> <a href="tel:+15555555555">555-555-1234</a></p>
-                                    <ul className="footer-social">
-                                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="col-md-3 col-sm-4">
-                                    <div className="footer-widget">
-                                    <h3 className="widgettitle widget-title">All Navigation</h3>
-                                    <div className="textwidget">
-                                        <div className="textwidget">
-                                        <ul className="footer-navigation">
-                                            <li><a href="manage-company.html" title="">Front-end Design</a></li>
-                                            <li><a href="manage-company.html" title="">Android Developer</a></li>
-                                            <li><a href="manage-company.html" title="">CMS Development</a></li>
-                                            <li><a href="manage-company.html" title="">PHP Development</a></li>
-                                            <li><a href="manage-company.html" title="">IOS Developer</a></li>
-                                            <li><a href="manage-company.html" title="">Iphone Developer</a></li>
-                                        </ul>
-                                    </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="col-md-3 col-sm-4">
-                                    <div className="footer-widget">
-                                    <h3 className="widgettitle widget-title">All Categories</h3>
-                                    <div className="textwidget">
-                                        <ul className="footer-navigation">
-                                            <li><a href="manage-company.html" title="">Front-end Design</a></li>
-                                            <li><a href="manage-company.html" title="">Android Developer</a></li>
-                                            <li><a href="manage-company.html" title="">CMS Development</a></li>
-                                            <li><a href="manage-company.html" title="">PHP Development</a></li>
-                                            <li><a href="manage-company.html" title="">IOS Developer</a></li>
-                                            <li><a href="manage-company.html" title="">Iphone Developer</a></li>
-                                        </ul>
-                                    </div>
-                                    </div>
-                                </div>
-                                    
-                                <div className="col-md-3 col-sm-4">
-                                    <div className="footer-widget">
-                                    <h3 className="widgettitle widget-title">Connect Us</h3>
-                                    <div className="textwidget">
-                                    <form className="footer-form">
-                                        <input type="text" className="form-control" placeholder="Your Name" /> 
-                                        <input type="text" className="form-control" placeholder="Email" />
-                                        <textarea className="form-control" placeholder="Message"></textarea>
-                                        <button type="submit" className="btn btn-primary">Login</button>
-                                    </form>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="row copyright">
-                            <div className="container">
-                                <p>Copyright Job Stock © 2019. All Rights Reserved </p>
-                            </div>
-                        </div>
-                    </footer>
+                   <Utilities.Footer />
 
                     <div className="clearfix"></div>
             

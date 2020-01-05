@@ -1,6 +1,54 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+const Utilities = {
+	Footer: function () {
+		return (
+			<footer className="footer light-footer">
+	            <div className="row copyright">
+	                <div className="container">
+	                    <p>Copyright DevJobs &copy; {new Date().getFullYear()} All Rights Reserved </p>
+	                </div>
+	            </div>
+	        </footer>
+		)
+	},
+
+	Nav: function() {
+		return (
+			<nav className="navbar navbar-default navbar-fixed navbar-white white bootsnav">
+
+                <div className="container">            
+                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i className="fa fa-bars"></i>
+                    </button>
+                    
+                    <div className="navbar-header">
+                        <Link className="text-white navbar-brand" to="/">
+                            DevJobs
+                        </Link>
+                    </div>
+                        
+                    <div className="collapse navbar-collapse" id="navbar-menu">
+          
+                        <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style={{marginTop: "5px"}}>
+                            {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
+                            {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
+                            <li className="left-br">
+                                <Link to="/login" className="signin">Sign In Now</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   
+            </nav>
+		)
+	},
+
+	Spacing: function() {
+		return (<div>&nbsp;</div>)
+	}
+}
+
 class Home extends React.Component {
 
 	constructor() {
@@ -15,33 +63,32 @@ class Home extends React.Component {
 			    {/*<div className="Loader"></div>*/}
 
 			    <div className="wrapper">
-			        <nav className="navbar navbar-default navbar-fixed navbar-transparent white bootsnav">
-			            <div className="container">
 
-			                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                <i className="fa fa-bars"></i></button>
-			                <div className="navbar-header">
-			                    <Link className="navbar-brand text-white mt-4" to="/">
-			                    	DevJobs
-			                    </Link>			          
-			                </div>
+			    	<nav className="navbar navbar-default navbar-fixed navbar-transparent white bootsnav">
 
-			                <div className="collapse navbar-collapse" id="navbar-menu">
-			                    <ul style={{marginTop: "5px"}} className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                        <li className="">
-			                        	<a href="" data-toggle="modal" data-target="#signup" className="signin">Sign In Now
-			                        	</a>
-			                        </li>
-
-			                        <li>
-			                        	<Link className="navbar-brand text-white" to="/companylisting">
-					                    	Browse Companies
-					                    </Link>
-			                   		</li>
-			                    </ul>
-			                </div>
-			            </div>
-			        </nav>
+		                <div className="container">            
+		                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+		                        <i className="fa fa-bars"></i>
+		                    </button>
+		                    
+		                    <div className="navbar-header" style={{marginTop: "1rem"}}>
+		                        <a className="text-white navbar-brand" href="index.html">
+		                            DevJobs
+		                        </a>
+		                    </div>
+		                        
+		                    <div className="collapse navbar-collapse" id="navbar-menu">
+		          
+		                        <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+		                            {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
+		                            {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
+		                            <li className="left-br">
+		                                <a href="#"  data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </div>   
+		            </nav> 			        
 
 			        <div className="clearfix"></div>
 			        <div className="home-three-banner" style={{backgroundImage: "url('assets/img/bn3.jpg')"}}>
@@ -49,22 +96,28 @@ class Home extends React.Component {
 			                <div className="simple-banner-caption">
 			                    <div className="col-md-8 col-sm-10 banner-text">
 			                        <h1>Best Place To Grow Your<span> Career </span></h1>
-			                        <p>Aliquam Vestibulum Cursus Felis. In Iaculis Iaculis Sapien Ac Condimentum. Vestibulum Congue Posuere Lacus, Id Tincidunt Pellentesque Dui Non, Semper Orci. </p>
+			                        <p>
+			                        	One million success stories.
+			                        	<br />Start yours today.
+			                        </p>
 			                        <form className="bt-form">
+
 			                            <div className="col-md-6 col-sm-6">
 			                                <input type="text" className="form-control" placeholder="Skills, Designations" />
 			                            </div>
+
 			                            <div className="col-md-6 col-sm-6">
 			                                <select id="choose-city" className="form-control">
-			                                    <option>Choose City</option>
-			                                    <option>Chandigarh</option>
+			                                    <option disabled selected>Choose City</option>
+			                                    <option>Lagos</option>
+			                                    <option>Ibadan</option>
+			                                    <option>Abuja</option>
 			                                    <option>London</option>
-			                                    <option>England</option>
-			                                    <option>Pratapcity</option>
-			                                    <option>Ukrain</option>
-			                                    <option>Wilangana</option>
+			                                    <option>New York</option>
+			                                    <option>Michigan</option>
 			                                </select>
 			                            </div>
+
 			                            <div className="col-md-6 col-sm-6">
 			                                <input type="text" className="form-control" placeholder="Companies" />
 			                            </div>
@@ -74,6 +127,7 @@ class Home extends React.Component {
 			                            <div className="col-md-4 col-sm-5">
 			                                <button type="submit" className="btn btn-primary">Search Job</button>
 			                            </div>
+
 			                        </form>
 			                    </div>
 			                </div>
@@ -94,7 +148,11 @@ class Home extends React.Component {
 			                    <div className="col-md-3 col-sm-6">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-bargraph" aria-hidden="true"></i><i className="icon-bargraph abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+				                                <i className="icon-bargraph" aria-hidden="true"></i>
+				                                <i className="icon-bargraph abs-icon" aria-hidden="true"></i>
+			                                </div>
+
 			                                <div className="category-detail category-desc-text">
 			                                    <h4> <Link to="/joblisting">Remote Jobs</Link></h4>
 			                                    <p>122 Jobs</p>
@@ -202,22 +260,22 @@ class Home extends React.Component {
 			                    <div className="work-process">
 			                        <div className="work-process-icon"><span className="icon-search"></span></div>
 			                        <div className="work-process-caption">
-			                            <h4>Search Job</h4>
-			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
+			                            <h4>Search Jobs</h4>
+			                            <p>Use our advanced search engine and search for jobs with selected key words and filters.</p>
 			                        </div>
 			                    </div>
 			                    <div className="work-process">
 			                        <div className="work-process-icon"><span className="icon-mobile"></span></div>
 			                        <div className="work-process-caption">
 			                            <h4>Find Job</h4>
-			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
+			                            <p>You need a fulltime work or just some freelancing or a contract, DevJobs has it all.</p>
 			                        </div>
 			                    </div>
 			                    <div className="work-process">
 			                        <div className="work-process-icon"><span className="icon-profile-male"></span></div>
 			                        <div className="work-process-caption">
 			                            <h4>Hire Employee</h4>
-			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
+			                            <p>You need some professional to take care of a tech solution for your business, browse through our exotic collection of talented experts and take your pick.</p>
 			                        </div>
 			                    </div>
 			                </div>
@@ -228,100 +286,30 @@ class Home extends React.Component {
 			                        <div className="work-process-icon"><span className="icon-layers"></span></div>
 			                        <div className="work-process-caption">
 			                            <h4>Start Work</h4>
-			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
+			                            <p>Accept hire invitation from a company or get accepted to work in a company, and get started!</p>
 			                        </div>
 			                    </div>
 			                    <div className="work-process">
 			                        <div className="work-process-icon"><span className="icon-wallet"></span></div>
 			                        <div className="work-process-caption">
 			                            <h4>Pay Money</h4>
-			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
+			                            <p>Receive payment from our advanced and secure payment platform. You get what was promised.</p>
 			                        </div>
 			                    </div>
-			                    <div className="work-process">
+			                    {/*<div className="work-process">
 			                        <div className="work-process-icon"><span className="icon-happy"></span></div>
 			                        <div className="work-process-caption">
 			                            <h4>Happy</h4>
 			                            <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus</p>
 			                        </div>
-			                    </div>
+			                    </div>*/}
 			                </div>
 			            </div>
 			        </section>
 
-			        <div className="clearfix"></div>
-			        <section className="call-to-act">
-			            <div className="container-fluid">
-			                <div className="col-md-6 col-sm-6 no-padd bl-dark">
-			                    <div className="call-to-act-caption">
-			                        <h2>We Are Expert In Web design and development</h2>
-			                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</h3><a href="#" className="btn bat-call-to-act">Hire Us</a></div>
-			                </div>
-			                <div className="col-md-6 col-sm-6 no-padd gr-dark">
-			                    <div className="call-to-act-caption">
-			                        <h2>We Are Expert In Web design and development</h2>
-			                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</h3><a href="#" className="btn bat-call-to-act">Join Us</a></div>
-			                </div>
-			            </div>
-			        </section>
+			        <div className="clearfix"></div>			        
 
-					<footer className="footer light-footer">
-			            <div className="row no-padding">
-			                <div className="container">
-			                    <div className="col-md-3 col-sm-12">
-			                        <div className="footer-widget">
-			                            <h3 className="widgettitle widget-title">About DevJobs</h3>
-			                            <div className="textwidget">
-			                                <p>286 Bornu Way
-			                                    <br />Yaba, Lagos
-			                                </p>				  
-			                                <ul className="footer-social">
-			                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			                                    <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-			                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			                                    <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-			                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-			                                </ul>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    
-			                    <div className="col-md-3 col-sm-4">
-			                        <div className="footer-widget">
-			                            <h3 className="widgettitle widget-title">All Categories</h3>
-			                            <div className="textwidget">
-			                                <ul className="footer-navigation">
-			                                    <li><a href="manage-company.html" title="">Front-end Design</a></li>
-			                                    <li><a href="manage-company.html" title="">Android Developer</a></li>
-			                                    <li><a href="manage-company.html" title="">CMS Development</a></li>
-			                                    <li><a href="manage-company.html" title="">PHP Development</a></li>
-			                                    <li><a href="manage-company.html" title="">IOS Developer</a></li>
-			                                    <li><a href="manage-company.html" title="">Iphone Developer</a></li>
-			                                </ul>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div className="col-md-3 col-sm-4">
-			                        <div className="footer-widget">
-			                            <h3 className="widgettitle widget-title">Connect With Us</h3>
-			                            <div className="textwidget">
-			                                <form className="footer-form">
-			                                    <input type="text" className="form-control" placeholder="Your Name" />
-			                                    <input type="text" className="form-control" placeholder="Email" />
-			                                    <textarea className="form-control" placeholder="Message"></textarea>
-			                                    <button type="submit" className="btn btn-primary">Login</button>
-			                                </form>
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			            <div className="row copyright">
-			                <div className="container">
-			                    <p>Copyright DevJobs © 2019. All Rights Reserved </p>
-			                </div>
-			            </div>
-			        </footer>
+					<Utilities.Footer />
 
 			        <div className="clearfix"></div>
 			        <div className="modal fade" id="signup" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
@@ -388,4 +376,4 @@ class Home extends React.Component {
 	}
 }
 
-export {Home};
+export {Home, Utilities};

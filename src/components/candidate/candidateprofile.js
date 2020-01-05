@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Utilities} from "../home";
 
 class CandidateProfile extends React.Component {
 	constructor() {
@@ -13,370 +14,289 @@ class CandidateProfile extends React.Component {
 	render() {
 		return (
 			<article>
-			    
-			    <div className="jp_top_header_img_wrapper">
-			        <div className="gc_main_menu_wrapper">
-			            <div className="container-fluid">
-			                <div className="row">
-			                    <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-xs hidden-sm full_width">
-			                        <div className="gc_header_wrapper">
-			                            <div className="gc_logo">
-			                                <Link to="/" >
-			                                	<img src="assets/images/header/logo2.png" alt="Logo" title="Job Pro" className="img-responsive" />
-			                                </Link>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 full_width">
-			                        <div className="header-area hidden-menu-bar stick" id="sticker">
-			                            
-			                            {/* mainmenu end */}
-			                            {/* mobile menu area start */}
-			                            <header className="mobail_menu">
-			                                <div className="container-fluid">
-			                                    <div className="row">
-			                                        <div className="col-xs-6 col-sm-6">
-			                                            <div className="gc_logo">
-			                                                <Link to="/" ><img src="images/header/logo2.png" alt="Logo" title="Grace Church" /></Link>
-			                                            </div>
-			                                        </div>
-			                                        <div className="col-xs-6 col-sm-6">
-			                                            <div className="cd-dropdown-wrapper">
-			                                                <a className="house_toggle" href="#0">
-																<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
-																version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" 
-																style={{enablebackground: "new 0 0 31.177 31.177"}} 
-																xmlSpace="preserve" width="25px" height="25px"><g><g>
-																<path className="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z" fill="#000000"/></g><g><path className="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z" fill="#000000"/></g><g><path className="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z" fill="#000000"/></g><g><path className="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z" fill="#000000"/></g><g><path className="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z" fill="#000000"/></g></g></svg>
-																</a>
-			                                                <nav className="cd-dropdown">
-			                                                    <h2><Link to="/">Job<span>Pro</span></Link></h2>
-			                                                    <a href="#0" className="cd-close">Close</a>
-			                                                    <ul className="cd-dropdown-content">
-			                                                        <li>
-			                                                            <form className="cd-search">
-			                                                                <input type="search" placeholder="Search..." />
-			                                                            </form>
-			                                                        </li>
+			    <div className="wrapper">  
+			
+					<Utilities.Nav />
+					<div className="clearfix"></div>
+			
+					<section className="inner-header-title" style="background-image:url(assets/img/banner-10.jpg);">
+						<div className="container">
+							<h1>Candidate Detail</h1>
+						</div>
+					</section>
 
-			                                                        <li className="has-children">
-			                                                            <a href="#">Listing</a>
-
-			                                                            <ul className="cd-secondary-dropdown is-hidden">
-			                                                                <li className="go-back"><a href="#0">Menu</a></li>
-			                                                                <li>
-			                                                                    <a href="listing_left.html">listing-Left</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                                <li>
-			                                                                    <a href="listing_right.html">listing-Right</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                                <li>
-			                                                                    <a href="listing_single.html">listing-Single</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                            </ul>
-			                                                            {/* .cd-secondary-dropdown */}
-			                                                        </li>
-			                                                        {/* .has-children */}
-			                                                        <li className="has-children">
-			                                                            <a href="#">candidates</a>
-
-			                                                            <ul className="cd-secondary-dropdown is-hidden">
-			                                                                <li className="go-back"><a href="#0">Menu</a></li>
-																			<li><a href="company_listing.html">Company-Listing</a></li>
-																			<li><a href="company_listing_single.html">Company-Single</a></li>
-																			<li><a href="candidate_listing.html">candidate-Listing</a></li>
-																			<li><a href="candidate_profile.html">candidate-Profile</a></li>
-			                                                                {/* .has-children */}
-
-			                                                            </ul>
-			                                                            {/* .cd-secondary-dropdown */}
-			                                                        </li>
-																	<li className="has-children">
-			                                                            <a href="#">Pages</a>
-
-			                                                            <ul className="cd-secondary-dropdown is-hidden">
-			                                                                <li className="go-back"><a href="#0">Menu</a></li>
-			                                                                <li><a href="about.html">About-Us</a></li>
-																			<li><a href="404_error.html">404</a></li>
-																			<li><a href="add_postin.html">Add-Posting</a></li>
-																			<li><a href="login.html">Login</a></li>
-																			<li><a href="register.html">Register</a></li>
-																			<li><a href="pricing.html">Pricing</a></li>
-			                                                                {/* .has-children */}
-
-			                                                            </ul>
-			                                                            {/* .cd-secondary-dropdown */}
-			                                                        </li>
-			                                                        {/* .has-children */}
-			                                                        <li className="has-children">
-			                                                            <a href="#">Blog</a>
-
-			                                                            <ul className="cd-secondary-dropdown is-hidden">
-			                                                                <li className="go-back"><a href="#0">Menu</a></li>
-			                                                                <li>
-			                                                                    <a href="blog_left.html">Blog-Left</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                                <li>
-			                                                                    <a href="blog_right.html">Blog-Right</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                                <li>
-			                                                                    <a href="blog_single_left.html">Blog-Single-Left</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                                <li>
-			                                                                    <a href="blog_single_right.html">Blog-Single-Left</a>
-			                                                                </li>
-			                                                                {/* .has-children */}
-
-			                                                            </ul>
-			                                                            {/* .cd-secondary-dropdown */}
-			                                                        </li>
-			                                                        {/* .has-children */}
-			                                                        <li>
-			                                                            <a href="contact.html">Contact</a>
-			                                                        </li>
-																	<li>
-			                                                            <a href="register.html">Sign Up</a>
-			                                                        </li>
-																	<li>
-			                                                            <a href="login.html">Login</a>
-			                                                        </li>
-
-			                                                    </ul>
-			                                                    {/* .cd-dropdown-content */}
-
-
-
-			                                                </nav>
-			                                                {/* .cd-dropdown */}
-
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                                {/* .cd-dropdown-wrapper */}
-			                            </header>
-			                        </div>
-			                    </div>
-			                    
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-			    
-				<div className="jp_cp_profile_main_wrapper">
-					<div className="container">
-						<div className="row">
-							<div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<div className="jp_cp_left_side_wrapper">
-									<div className="jp_cp_left_pro_wallpaper">
-										<img src="assets/images/content/cp1.png" alt="profile_img" />
-										<h2>Farhan Shaikh</h2>
-										<p>UI/UX Designer in Dewas</p>
-										<ul>
-											<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i className="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i className="fa fa-youtube-play"></i></a></li>
-										</ul>
+					<div className="clearfix"></div>
+					<section className="detail-desc">
+						<div className="container">
+						
+							<div className="ur-detail-wrap top-lay">
+								
+								<div className="ur-detail-box">
+									
+									<div className="ur-thumb">
+										<img src="assets/img/can-2.png" className="img-responsive" alt="" />
 									</div>
-									<div className="jp_cp_rd_wrapper">
-										<ul>
-											<li><a href="#"><i className="fa fa-download"></i> &nbsp;Download Resume</a></li>
-											<li><a href="#"><i className="fa fa-phone"></i> &nbsp;Contact candidate</a></li>
-										</ul>
-									</div>
+									<div className="ur-caption">
+										<h4 className="ur-title">Daniel Diwards</h4>
+										<p className="ur-location">
+											<i className="ti-location-pin mrg-r-5"></i>232, New Sleewar, Canada
+										</p>
+										<span className="ur-designation">Web Designer</span>
+										<div className="rateing">
+											<i className="fa fa-star filled"></i>
+											<i className="fa fa-star filled"></i>
+											<i className="fa fa-star filled"></i>
+											<i className="fa fa-star filled"></i>
+											<i className="fa fa-star"></i>
+										</div>
+									</div>	
 								</div>
-			                    <div className="jp_add_resume_wrapper jp_job_location_wrapper jp_cp_left_ad_res">
-			                        <div className="jp_add_resume_img_overlay"></div>
-			                        <div className="jp_add_resume_cont">
-			                            <img src="assets/images/content/resume_logo.png" alt="logo" />
-			                            <h4>Get Best Matched Jobs On your Email. Add Resume NOW!</h4>
-			                            <ul>
-			                                <li><a href="#"><i className="fa fa-plus-circle"></i> &nbsp;ADD RESUME</a></li>
-			                            </ul>
-			                        </div>
-			                    </div>
+								
+								<div className="ur-detail-btn">
+									<a href="#" className="btn btn-warning mrg-bot-10 full-width">
+										<i className="ti-thumb-up mrg-r-5"></i>Shortlist
+									</a>
+									<br />
+									<a href="#" className="btn btn-info full-width">
+										<i className="ti-download mrg-r-5"></i>Download CV
+									</a>
+								</div>
+								
 							</div>
-							<div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-								<div className="jp_cp_right_side_wrapper">
-									<div className="jp_cp_right_side_inner_wrapper">
-										<h2>PERSONAL DETAILS</h2>
-										<table>
-			                                <tbody>
-			                                    <tr>
-			                                        <td className="td-w25">Full Name</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">Farhan Shaikh</td>
-			                                    </tr>
-			                                    <tr>
-			                                        <td className="td-w25">Address</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">Street 110-B Kalani Bag, Dewas, M.P. INDIA</td>
-			                                    </tr>
-			                                    <tr>
-			                                        <td className="td-w25">Zip Code</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">12345</td>
-			                                    </tr>
-			                                    <tr>
-			                                        <td className="td-w25">Phone</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">+0 123456789 , +0 123456789</td>
-			                                    </tr>
-			                                    <tr>
-			                                        <td className="td-w25">Email</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">support@example.com</td>
-			                                    </tr>
-			                                    <tr>
-			                                        <td className="td-w25">Website</td>
-			                                        <td className="td-w10">:</td>
-			                                        <td className="td-w65">http://example.com</td>
-			                                    </tr>
-
-			                                </tbody>
-			                            </table>
+							
+						</div>
+					</section>
+					
+					<section className="full-detail-description full-detail">
+						<div className="container">
+							<div className="row">
+								
+								<div className="col-lg-8 col-md-8">
+									
+									<div className="row-bottom">
+										<h2 className="detail-title">About Candidate</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 									</div>
-								</div>
-								<div className="row">
-									<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-										<div className="jp_cp_accor_heading_wrapper">
-											<h2>Education</h2>
-											<p>Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
-										</div>
+									
+									<div className="row-bottom">
+										<h2 className="detail-title">Education</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul className="trim-edu-list">
+										
+											<li>
+												<div className="trim-edu">
+													<h4 className="trim-edu-title">Virallia University<span className="title-est">2010 - 2012</span></h4>
+													<strong>Masters In Fine Arts</strong>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												</div>
+											</li>
+											
+											<li>
+												<div className="trim-edu">
+													<h4 className="trim-edu-title">Virallia University<span className="title-est">2010 - 2012</span></h4>
+													<strong>Masters In Fine Arts</strong>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												</div>
+											</li>
+											
+										</ul>
 									</div>
-									<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-										<div className="accordion_wrapper abt_page_2_wrapper">
-											<div className="panel-group" id="accordion_threeLeft">
-
-												{/* /.panel-default */}
-												<div className="panel panel-default">
-													<div className="panel-heading bell">
-														<h4 className="panel-title">
-															<a className="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree" aria-expanded="false">
-													DIPLOMA IN COMPUTER 
-												  </a>
-														</h4>
-													</div>
-													<div id="collapseTwentyLeftThree" className="panel-collapse collapse" aria-expanded="false" role="tablist">
-														<div className="panel-body">
-															Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+									
+									<div className="row-bottom">
+										<h2 className="detail-title">Work & Experience</h2>
+										<ul className="trim-edu-list">
+										
+											<li>
+												<div className="trim-edu">
+													<h4 className="trim-edu-title">Innvovation Tech<span className="title-est">2013 - 2014</span></h4>
+													<strong>Web Designer</strong>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												</div>
+											</li>
+											
+											<li>
+												<div className="trim-edu">
+													<h4 className="trim-edu-title">Livar Studio<span className="title-est">2014 - 2016</span></h4>
+													<strong>Graphic Designer</strong>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												</div>
+											</li>
+											
+										</ul>
+									</div>
+									
+									<div className="row-bottom">
+										<h2 className="detail-title">Skills</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<div className="ext-mrg row third-progress">
+											<div className="col-md-6 col-sm-6">
+												<div className="panel-body">
+													<h3 className="progressbar-title">Apps Development</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 90%; background: #26a9e1;">
+															<span className="progress-icon fa fa-plus" style="border-color:#26a9e1; color:#26a9e1;"></span>
+															<div className="progress-value">90%</div>
 														</div>
 													</div>
-												</div>
-												<div className="panel panel-default">
-													<div className="panel-heading bell">
-														<h4 className="panel-title">
-															<a className="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree2" aria-expanded="false">
-													HIGHER SECONDRY EDUCATION 
-												  </a>
-														</h4>
-													</div>
-													<div id="collapseTwentyLeftThree2" className="panel-collapse collapse" aria-expanded="false" role="tablist">
-														<div className="panel-body">
-															Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+													
+													<h3 className="progressbar-title">iPhone Development</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 80%; background: #f6931e;">
+															<span className="progress-icon fa fa-plus" style="border-color:#f6931e; color:#f6931e;"></span>
+															<div className="progress-value">80%</div>
 														</div>
 													</div>
-												</div>
-												<div className="panel panel-default">
-													<div className="panel-heading bell">
-														<h4 className="panel-title">
-															<a className="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree3" aria-expanded="false">
-													HIGH SCHOOL DEGREE
-												  </a>
-														</h4>
-													</div>
-													<div id="collapseTwentyLeftThree3" className="panel-collapse collapse" aria-expanded="false" role="tablist">
-														<div className="panel-body">
-															Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+													
+													<h3 className="progressbar-title">Digital Marketing</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 65%; background: #8bc43f;">
+															<span className="progress-icon fa fa-plus" style="border-color:#8bc43f; color:#8bc43f;"></span>
+															<div className="progress-value">52%</div>
 														</div>
 													</div>
+													
+													<h3 className="progressbar-title">SEO/SMO</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 52%; background: #d20001;">
+															<span className="progress-icon fa fa-plus" style="border-color:#d20001; color:#d20001;"></span>
+															<div className="progress-value">52%</div>
+														</div>
+													</div>
+													
 												</div>
-												{/* /.panel-default */}
 											</div>
-											{/*end of /.panel-group*/}
+											
+											<div className="col-sm-6 col-sm-6">
+												<div className="panel-body">
+													<h3 className="progressbar-title">Apps Development</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 90%; background: #26a9e1;">
+															<span className="progress-icon fa fa-plus" style="border-color:#26a9e1; color:#26a9e1;"></span>
+															<div className="progress-value">90%</div>
+														</div>
+													</div>
+													
+													<h3 className="progressbar-title">iPhone Development</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 80%; background: #f6931e;">
+															<span className="progress-icon fa fa-plus" style="border-color:#f6931e; color:#f6931e;"></span>
+															<div className="progress-value">80%</div>
+														</div>
+													</div>
+													
+													<h3 className="progressbar-title">Digital Marketing</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 65%; background: #8bc43f;">
+															<span className="progress-icon fa fa-plus" style="border-color:#8bc43f; color:#8bc43f;"></span>
+															<div className="progress-value">52%</div>
+														</div>
+													</div>
+													
+													<h3 className="progressbar-title">SEO/SMO</h3>
+													<div className="progress">
+														<div className="progress-bar" style="width: 52%; background: #d20001;">
+															<span className="progress-icon fa fa-plus" style="border-color:#d20001; color:#d20001;"></span>
+															<div className="progress-value">52%</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>
 										</div>
 									</div>
+									
 								</div>
+								
+								<div className="col-lg-4 col-md-4">
+									<div className="full-sidebar-wrap">
+										
+										<div className="sidebar-widgets">
+										
+											<div className="ur-detail-wrap">
+												<div className="ur-detail-wrap-header">
+													<h4>Candidate Overview</h4>
+												</div>
+												<div className="ur-detail-wrap-body">
+													<ul className="ove-detail-list">
+													
+														<li>
+															<i className="ti-wallet"></i>
+															<h5>Offerd Salary</h5>
+															<span>£15,000 - £20,000</span>
+														</li>
+														
+														<li>
+															<i className="ti-user"></i>
+															<h5>Gender</h5>
+															<span>Male</span>
+														</li>
+														
+														<li>
+															<i className="ti-ink-pen"></i>
+															<h5>Career Level</h5>
+															<span>Excutive</span>
+														</li>
+														
+														<li>
+															<i className="ti-home"></i>
+															<h5>Industry</h5>
+															<span>Management</span>
+														</li>
+														
+														<li>
+															<i className="ti-shield"></i>
+															<h5>Experience</h5>
+															<span>5 Years</span>
+														</li>
+														
+														<li>
+															<i className="ti-book"></i>
+															<h5>Qualification</h5>
+															<span>Master Degree</span>
+														</li>
+														
+													</ul>
+												</div>
+											</div>
+											
+										</div>
+										
+										<div className="sidebar-widgets">
+										
+											<div className="ur-detail-wrap">
+												<div className="ur-detail-wrap-header">
+													<h4>Get In Touch</h4>
+												</div>
+												<div className="ur-detail-wrap-body">
+													<form action="#">
+														<div className="form-group">
+															<label>Name</label>
+															<input type="email" className="form-control" />
+														</div>
+														<div className="form-group">
+															<label>Email</label>
+															<input type="email" className="form-control" />
+														</div>
+														<div className="form-group">
+															<label>Message</label>
+															<textarea className="form-control"></textarea>
+														</div>
+														<button type="submit" className="btn btn-primary">Submit</button>
+													</form>
+												</div>
+											</div>	
+										</div>
+									
+									</div>
+								</div>
+							
 							</div>
 						</div>
-					</div>
+					</section>
+
 				</div>
-			    
-			    {/* jp downlord Wrapper End */}
-				{/* jp Newsletter Wrapper Start */}
-			    <div className="jp_main_footer_img_wrapper">
-			        <div className="jp_newsletter_img_overlay_wrapper"></div>
-			        <div className="jp_newsletter_wrapper">
-			            <div className="container">
-			                <div className="row">
-			                    <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			                        <div className="jp_newsletter_text">
-			                            <img src="assets/images/content/news_logo.png" className="img-responsive" alt="news_logo" />
-			                        </div>
-			                    </div>
-			                    <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-			                        <div className="jp_newsletter_field">
-			                            <i className="fa fa-envelope-o"></i><input type="text" placeholder="Enter Your Email" /><button type="submit">Submit</button>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			        {/* jp Newsletter Wrapper End */}
-			        {/* jp footer Wrapper Start */}
-			        <div className="jp_footer_main_wrapper">
-			            <div className="container">
-			                <div className="row">
-			                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			                        <div className="jp_footer_logo_wrapper">
-			                            <div className="jp_footer_logo">
-			                                <a href="#"><img src="assets/images/content/resume_logo.png" alt="footer_logo"/></a>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    
-			                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			                        <div className="jp_bottom_footer_Wrapper">
-			                            <div className="row">
-			                                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			                                    <div className="jp_bottom_footer_left_cont">
-			                                        <p>© 2019-20 Job Pro. All Rights Reserved.</p>
-			                                    </div>
-			                                    <div className="jp_bottom_top_scrollbar_wrapper">
-			                                        <a href="javascript:" id="return-to-top"><i className="fa fa-angle-up"></i></a>
-			                                    </div>
-			                                </div>
-			                                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			                                    <div className="jp_bottom_footer_right_cont">
-			                                        <ul>
-			                                            <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			                                            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			                                            <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
-			                                            <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-			                                            <li className="hidden-xs"><a href="#"><i className="fa fa-google-plus"></i></a></li>
-			                                            <li className="hidden-xs"><a href="#"><i className="fa fa-vimeo"></i></a></li>
-			                                        </ul>
-			                                    </div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
+
 			</article>
 		)
 	}
