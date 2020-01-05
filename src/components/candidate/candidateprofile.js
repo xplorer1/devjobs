@@ -19,7 +19,7 @@ class CandidateProfile extends React.Component {
 					<Utilities.Nav />
 					<div className="clearfix"></div>
 			
-					<section className="inner-header-title" style="background-image:url(assets/img/banner-10.jpg);">
+					<section className="inner-header-title" style={{backgroundImage: "url('assets/img/banner-10.jpg')"}}>
 						<div className="container">
 							<h1>Candidate Detail</h1>
 						</div>
@@ -134,7 +134,7 @@ class CandidateProfile extends React.Component {
 												<div className="panel-body">
 													<h3 className="progressbar-title">Apps Development</h3>
 													<div className="progress">
-														<div className="progress-bar" style="width: 90%; background: #26a9e1;">
+														<div className="progress-bar" style={{width: 90%; background: "#26a9e1"}}>
 															<span className="progress-icon fa fa-plus" style="border-color:#26a9e1; color:#26a9e1;"></span>
 															<div className="progress-value">90%</div>
 														</div>

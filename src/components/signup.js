@@ -34,4 +34,4 @@ class SignUp extends React.Component {
 	}
 }
 
-export {SignUp};
+export default SignUp;
