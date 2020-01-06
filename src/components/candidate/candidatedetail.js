@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Utilities} from "../home";
 
-class CandidateProfile extends React.Component {
+class CandidateDetail extends React.Component {
 	constructor() {
 		super();
 
@@ -302,4 +302,4 @@ class CandidateProfile extends React.Component {
 	}
 }
 
-export {CandidateProfile};
+export default CandidateDetail;
