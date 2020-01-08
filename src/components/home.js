@@ -35,7 +35,7 @@ const Utilities = {
                             {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
                             {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
                             <li className="left-br">
-                                <Link to="/login" className="signin">Sign In Now</Link>
+                                <a data-toggle="modal" data-target="#signup" className="signin">Post a Job</a>
                             </li>
                         </ul>
                     </div>
@@ -72,21 +72,21 @@ class Home extends React.Component {
 		                    </button>
 		                    
 		                    <div className="navbar-header" style={{marginTop: "1rem"}}>
-		                        <a className="text-white navbar-brand" href="index.html">
+		                        <Link className="text-white navbar-brand" to="/">
 		                            DevJobs
-		                        </a>
+		                        </Link>
 		                    </div>
 		                        
 		                    <div className="collapse navbar-collapse" id="navbar-menu">
-		          
 		                        <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 		                            {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
 		                            {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
 		                            <li className="left-br">
-		                                <a href="#"  data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a>
+		                                <a href="#" data-toggle="modal" data-target="#signup" className="signin">Post a Job</a>
 		                            </li>
 		                        </ul>
 		                    </div>
+
 		                </div>   
 		            </nav> 			        
 
@@ -108,7 +108,7 @@ class Home extends React.Component {
 
 			                            <div className="col-md-6 col-sm-6">
 			                                <select id="choose-city" className="form-control">
-			                                    <option disabled selected>Choose City</option>
+			                                    <option disabled>Choose City</option>
 			                                    <option>Lagos</option>
 			                                    <option>Ibadan</option>
 			                                    <option>Abuja</option>
@@ -145,105 +145,146 @@ class Home extends React.Component {
 
 			                <div className="row">
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
-				                                <i className="icon-bargraph" aria-hidden="true"></i>
-				                                <i className="icon-bargraph abs-icon" aria-hidden="true"></i>
+				                                <img src="assets/img/icons/remote.png" alt="Remote Jobs" className="w25" />
 			                                </div>
 
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">Remote Jobs</Link></h4>
-			                                    <p>122 Jobs</p>
+			                                    <h4> <span >Remote Jobs</span></h4>
+			                                    {/*<p>122 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-tools-2" aria-hidden="true"></i><i className="icon-tools-2 abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/reactjs.png" alt="ReactJs Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">ReactJs Developer</Link></h4>
-			                                    <p>155 Jobs</p>
+			                                    <h4> <span>ReactJs Developer</span></h4>
+			                                    {/*<p>155 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-briefcase" aria-hidden="true"></i><i className="icon-briefcase abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/jv.jpg" alt="Java Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <a href="browse-jobs-grid.html">Java Developer</a></h4>
-			                                    <p>300 Jobs</p>
+			                                    <h4> <span>Java Developer</span></h4>
+			                                    {/*<p>300 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-briefcase" aria-hidden="true"></i><i className="icon-briefcase abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/python.jpg" alt="Python Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">Python Developer</Link></h4>
-			                                    <p>300 Jobs</p>
+			                                    <h4> <span>Python Developer</span></h4>
+			                                    {/*<p>300 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-edit" aria-hidden="true"></i><i className="icon-edit abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/angularjs.png" alt="Angular Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">Angular Developer</Link></h4>
-			                                    <p>80 Jobs</p>
+			                                    <h4> <span>Angular Developer</span></h4>
+			                                    {/*<p>80 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-heart" aria-hidden="true"></i><i className="icon-heart abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/vuejs.png" alt="Remote Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">VueJs Developer</Link></h4>
-			                                    <p>120 Jobs</p>
+			                                    <h4> <span>VueJs Developer</span></h4>
+			                                    {/*<p>120 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-wine" aria-hidden="true"></i><i className="icon-wine abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/ui.png" alt="UI/UX Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">UI/UX Designer</Link></h4>
-			                                    <p>78 Jobs</p>
+			                                    <h4> <span>UI/UX Designer</span></h4>
+			                                    {/*<p>78 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>
+			                    </Link>
 
-			                    <div className="col-md-3 col-sm-6">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
-			                                <div className="category-icon"><i className="icon-map" aria-hidden="true"></i><i className="icon-map abs-icon" aria-hidden="true"></i></div>
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/seo-expert.png" alt="UI/UX Jobs" className="w25" />
+			                                </div>
 			                                <div className="category-detail category-desc-text">
-			                                    <h4> <Link to="/joblisting">See all Categories</Link></h4>
-			                                    <p>90 Jobs</p>
+			                                    <h4> <span>SEO Expert</span></h4>
+			                                    {/*<p>78 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </div>			      
+			                    </Link>
+
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                        <div className="category-box" data-aos="fade-up">
+			                            <div className="category-desc">
+			                                <div className="category-icon">
+			                                	<img src="assets/img/icons/product-manager.png" alt="UI/UX Jobs" className="w25" />
+			                                </div>
+			                                <div className="category-detail category-desc-text">
+			                                    <h4> <span>Product Manager</span></h4>
+			                                    {/*<p>78 Jobs</p>*/}
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </Link>
+
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                        <div className="category-box" data-aos="fade-up">
+			                            <div className="category-desc">
+			                                <div className="category-icon">
+			                               		<img src="assets/img/icons/all.png" alt="All Jobs" className="w25" />
+			                               	</div>
+			                                <div className="category-detail category-desc-text">
+			                                    <h4> <span>All Jobs</span></h4>
+			                                    {/*<p>900 Jobs</p>*/}
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </Link>			      
 			                </div>
 			            </div>
 			        </section>
@@ -370,7 +411,7 @@ class Home extends React.Component {
 	componentDidMount() {
 		setTimeout(function() {
 			console.log("state: ", this.state)
-			this.setState({showLoader: false})
+			//this.setState({showLoader: false})
 			//this.state.showLoader=false;
 		}.bind(this), 3000, this.state.showLoader);
 	}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import {Utilities} from "./home";
 
 class JobListing extends React.Component {
@@ -350,6 +350,27 @@ class JobListing extends React.Component {
             </article>
         )
     }
+
+    componentDidMount() {
+        /*const { match: { params } } = this.props;
+        let jobtype = params.jobtype.slice(1);
+
+        console.log("jobtype: ", jobtype)*/
+
+        /*fetch("https://jobs.github.com/positions.json")
+        .then((response) => {
+            return response.json();
+            //this.setState({showLoader: false})
+        })
+        .then((response) => {
+            console.log("response: ", response);
+        })
+        .catch((error) => {
+            this.setState({showLoader: false})
+
+            console.log("error: ", error);
+        })
+*/  }
 }
 
-export default JobListing;
+export default withRouter(JobListing);

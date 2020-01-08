@@ -5540,13 +5540,13 @@ color:#828fa2;
 /*----------- All Job Components: Job category box --------*/
 .category-box{
     position: relative;
-    height:210px;
+    height:140px;
 	background:#ffffff;
     box-shadow:0 5px 25px 0 rgba(41,128,185,0.15);
 	-webkit-box-shadow:0 5px 25px 0 rgba(41,128,185,0.15);
     border-radius: 5px;
     text-align: center;
-    padding:50px 12px 30px 12px;
+    padding:20px 12px 30px 12px;
     box-sizing: border-box;
     margin-top: 30px;
     overflow: hidden;
@@ -8341,4 +8341,8 @@ a.cl-box.pink {
 
 .d-inline {
 	display: inline;
+}
+
+.w25 {
+	width: 25% !important;
 }
