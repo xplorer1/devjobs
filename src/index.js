@@ -16,7 +16,7 @@ function App() {
 	    		<Route path='/login' component = {Login} />
 	    		<Route path='/signup' component = {SignUp} />
 	    		<Route path='/job' component = {Job} />
-				<Route exact={true} path='/joblisting/:jobtype' component = {JobListing} />
+				<Route path={"/joblisting"} component = {JobListing} />
 				<Route path='/candidateprofile' component = {CandidateProfile} />
 			</Switch>
         </Router>

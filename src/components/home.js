@@ -145,7 +145,7 @@ class Home extends React.Component {
 
 			                <div className="row">
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting/">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=remote">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from "react-router-dom";
 import {Utilities} from "./home";
+import queryString from "query-string";
 
 class JobListing extends React.Component {
     constructor() {
@@ -352,12 +353,11 @@ class JobListing extends React.Component {
     }
 
     componentDidMount() {
-        /*const { match: { params } } = this.props;
-        let jobtype = params.jobtype.slice(1);
+        console.log(this.props.location.search)
+        const values = queryString.parse(this.props.location.search)
+        console.log("values: ", values);
 
-        console.log("jobtype: ", jobtype)*/
-
-        /*fetch("https://jobs.github.com/positions.json")
+        fetch("https://jobs.github.com/positions.json")
         .then((response) => {
             return response.json();
             //this.setState({showLoader: false})
@@ -370,7 +370,7 @@ class JobListing extends React.Component {
 
             console.log("error: ", error);
         })
-*/  }
+  }
 }
 
-export default withRouter(JobListing);
+export default JobListing;
