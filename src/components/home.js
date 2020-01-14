@@ -160,7 +160,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=reactjs">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -174,7 +174,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=java">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -188,7 +188,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=python">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -202,7 +202,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=angular">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -216,7 +216,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=vuejs">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -230,7 +230,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=ui/ux">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -244,7 +244,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=seo">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -258,7 +258,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=productmanager">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -272,7 +272,7 @@ class Home extends React.Component {
 			                        </div>
 			                    </Link>
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting">
+			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=alljobs">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">

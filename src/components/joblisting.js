@@ -2,10 +2,16 @@ import React from 'react';
 import {Link, withRouter} from "react-router-dom";
 import {Utilities} from "./home";
 import queryString from "query-string";
+import store from "store";
 
 class JobListing extends React.Component {
     constructor() {
         super();
+
+        this.state = {
+            jobsearchresults: [],
+            ajaxloading: false
+        }
     }
 
     render() {
@@ -58,6 +64,77 @@ class JobListing extends React.Component {
                                         </div>
                                     </form>
                                 </div>
+                            </div>
+
+                            {
+                                this.state.jobsearchresults.map((result) => {
+                                    return (
+                                        <div className="item-click"  key={result.id}>
+                                            <article>
+                                                <div className="brows-job-list">
+                                                    <div className="col-md-6 col-sm-6">
+                                                        <div className="item-fl-box">
+                                                            <div className="brows-job-company-img">
+                                                                <Link to={"/apply/?id="+result.id}><img src={result.company_logo} className="img-responsive" alt="" /></Link>
+                                                            </div>
+                                                            <div className="brows-job-position">
+                                                                <h3><Link to={"/apply/?id="+result.id}>{result.title}</Link></h3>
+                                                                <p>
+                                                                    <span>{result.company}</span>
+                                                                {/*<span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>*/}
+                                                                    <span className="job-type cl-success bg-trans-success">{result.type}</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-4 col-sm-4">
+                                                        <div className="brows-job-location">
+                                                            <p><i className="fa fa-map-marker"></i>{result.location}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-2 col-sm-2">
+                                                        <div className="brows-job-link">
+                                                            <Link to={"/apply/?id="+result.id} className="btn btn-default">Apply Now</Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </article>
+                                        </div>
+                                    )
+                                })
+                            }
+
+                            {/*<div className="item-click">
+                                <article>
+                                    <div className="brows-job-list">
+                                        <div className="col-md-6 col-sm-6">
+                                            <div className="item-fl-box">
+                                                <div className="brows-job-company-img">
+                                                    <a href="job-detail.html"><img src="assets/img/com-1.jpg" className="img-responsive" alt="" /></a>
+                                                </div>
+                                                <div className="brows-job-position">
+                                                    <h3><a href="job-apply-detail.html">Java Developer</a></h3>
+                                                    <p>
+                                                        <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>
+                                                        <span className="job-type cl-success bg-trans-success">Full Time</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 col-sm-4">
+                                            <div className="brows-job-location">
+                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 col-sm-2">
+                                            <div className="brows-job-link">
+                                                <Link to="/job" className="btn btn-default">Apply Now</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </article>
                             </div>
                             
                             <div className="item-click">
@@ -276,7 +353,7 @@ class JobListing extends React.Component {
                                         </div>
                                     </div>
                                 </article>
-                            </div>
+                            </div>*/}
                             
                             <div className="row">
                                 <ul className="pagination">
@@ -352,25 +429,27 @@ class JobListing extends React.Component {
         )
     }
 
-    componentDidMount() {
-        console.log(this.props.location.search)
-        const values = queryString.parse(this.props.location.search)
-        console.log("values: ", values);
+    componentWillMount() {
+        const value = queryString.parse(this.props.location.search);
 
-        fetch("https://jobs.github.com/positions.json")
+        fetch("https://calm-spire-67840.herokuapp.com/" + "https://jobs.github.com/positions.json")
         .then((response) => {
             return response.json();
             //this.setState({showLoader: false})
         })
         .then((response) => {
-            console.log("response: ", response);
+            this.setState({
+                jobsearchresults: response
+            });
+
+            store.set("jobsearchresults", response);
         })
         .catch((error) => {
             this.setState({showLoader: false})
 
             console.log("error: ", error);
         })
-  }
+    }
 }
 
 export default JobListing;
