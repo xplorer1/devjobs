@@ -75,10 +75,10 @@ class JobListing extends React.Component {
                                                     <div className="col-md-6 col-sm-6">
                                                         <div className="item-fl-box">
                                                             <div className="brows-job-company-img">
-                                                                <Link to={"/apply/?id="+result.id}><img src={result.company_logo} className="img-responsive" alt="" /></Link>
+                                                                <Link to={"/job/?id="+result.id}><img src={result.company_logo} className="img-responsive" alt="" /></Link>
                                                             </div>
                                                             <div className="brows-job-position">
-                                                                <h3><Link to={"/apply/?id="+result.id}>{result.title}</Link></h3>
+                                                                <h3><Link to={"/job/?id="+result.id}>{result.title}</Link></h3>
                                                                 <p>
                                                                     <span>{result.company}</span>
                                                                 {/*<span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>*/}
@@ -94,7 +94,7 @@ class JobListing extends React.Component {
                                                     </div>
                                                     <div className="col-md-2 col-sm-2">
                                                         <div className="brows-job-link">
-                                                            <Link to={"/apply/?id="+result.id} className="btn btn-default">Apply Now</Link>
+                                                            <Link to={"/job/?id="+result.id} className="btn btn-default">View Details</Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -104,256 +104,6 @@ class JobListing extends React.Component {
                                     )
                                 })
                             }
-
-                            {/*<div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-1.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Java Developer</a></h3>
-                                                    <p>
-                                                        <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>
-                                                        <span className="job-type cl-success bg-trans-success">Full Time</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <Link to="/job" className="btn btn-default">Apply Now</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-1.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Java Developer</a></h3>
-                                                    <p>
-                                                        <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$750 - 800</span>
-                                                        <span className="job-type cl-success bg-trans-success">Full Time</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <Link to="/job" className="btn btn-default">Apply Now</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                </article>
-                            </div>
-                        
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-2.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Product Manager</a></h3>
-                                                    <p>
-                                                        <span>Google</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$810 - 900</span>
-                                                        <span className="job-type bg-trans-warning cl-warning">Part Time</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-3.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">ReactJs Developer</a></h3>
-                                                    <p>
-                                                        <span>Softcom</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$800 - 910</span>
-                                                        <span className="job-type bg-trans-primary cl-primary">Freelancer</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-4.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Data Analyst</a></h3>
-                                                    <p>
-                                                        <span>Microsoft</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$580 - 600</span>
-                                                        <span className="job-type bg-trans-success cl-success">Full Time</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Abuja</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-5.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">UI/UX Designer</a></h3>
-                                                    <p>
-                                                        <span>Autodesk</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$800 - 900</span>
-                                                        <span className="job-type bg-trans-denger cl-danger">Enternship</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-6.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Anguar Developer</a></h3>
-                                                    <p>
-                                                        <span>Google</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$510 - 700</span>
-                                                        <span className="job-type bg-trans-success cl-success">Remote</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            
-                            <div className="item-click">
-                                <article>
-                                    <div className="brows-job-list">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="item-fl-box">
-                                                <div className="brows-job-company-img">
-                                                    <a href="job-detail.html"><img src="assets/img/com-7.jpg" className="img-responsive" alt="" /></a>
-                                                </div>
-                                                <div className="brows-job-position">
-                                                    <h3><a href="job-apply-detail.html">Python Developer</a></h3>
-                                                    <p>
-                                                        <span>Honda</span><span className="brows-job-sallery"><i className="fa fa-money"></i>$700 - 800</span>
-                                                        <span className="job-type bg-trans-warning cl-warning">Remote</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="brows-job-location">
-                                                <p><i className="fa fa-map-marker"></i>Lagos</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-2 col-sm-2">
-                                            <div className="brows-job-link">
-                                                <a href="job-apply-detail.html" className="btn btn-default">Apply Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>*/}
                             
                             <div className="row">
                                 <ul className="pagination">
@@ -429,8 +179,13 @@ class JobListing extends React.Component {
         )
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const value = queryString.parse(this.props.location.search);
+        console.log("data: ", store.get("jobsearchresults"));
+
+        this.setState({
+            jobsearchresults: store.get("jobsearchresults")
+        });
 
         fetch("https://calm-spire-67840.herokuapp.com/" + "https://jobs.github.com/positions.json")
         .then((response) => {
