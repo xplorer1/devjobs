@@ -96,7 +96,7 @@ class Job extends React.Component {
                                     <div className="header-details">
                                         <h4>{this.state.job.company}</h4>
                                         <ul>
-                                            <li>Posted on {new Date(this.state.job.created_at).toDateString()}</li>
+                                            <li>Posted on {new Date(this.state.job.created_at).toDateString()}.</li>
                                                 
                                             <li><img className="flag" src="assets/img/gb.svg" alt="" />{this.state.job.location}</li>
                                         </ul>
@@ -276,7 +276,7 @@ class Job extends React.Component {
     componentDidMount() {
         const value = queryString.parse(this.props.location.search);
 
-        let targetjob = store.get("jobsearchresults").find((job) => {
+        let targetjob = store.get("github").find((job) => {
             return job.id === value.id;
         });
 

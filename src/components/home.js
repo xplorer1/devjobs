@@ -34,9 +34,9 @@ const Utilities = {
                         <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style={{marginTop: "5px"}}>
                             {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
                             {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
-                            <li className="left-br">
+                            {/*<li className="left-br">
                                 <a data-toggle="modal" data-target="#signup" className="signin">Post a Job</a>
-                            </li>
+                            </li>*/}
                         </ul>
                     </div>
                 </div>   
@@ -81,9 +81,9 @@ class Home extends React.Component {
 		                        <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 		                            {/*<li><Link to="/companylisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Companies</Link></li>*/}
 		                            {/*<li><Link to="/candidatelisting"><i className="fa fa-pencil" aria-hidden="true"></i>Browse Candidates</Link></li>*/}
-		                            <li className="left-br">
+		                            {/*<li className="left-br">
 		                                <a href="#" data-toggle="modal" data-target="#signup" className="signin">Post a Job</a>
-		                            </li>
+		                            </li>*/}
 		                        </ul>
 		                    </div>
 

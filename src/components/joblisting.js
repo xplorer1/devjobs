@@ -3,14 +3,18 @@ import {Link, withRouter} from "react-router-dom";
 import {Utilities} from "./home";
 import queryString from "query-string";
 import store from "store";
+import Parser from 'rss-parser';
 
 class JobListing extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            jobsearchresults: [],
-            ajaxloading: false
+            github: [],
+            stackoverflow: [],
+            ajaxloading: false,
+            fromstackoverflow: false,
+
         }
     }
 
@@ -67,7 +71,7 @@ class JobListing extends React.Component {
                             </div>
 
                             {
-                                this.state.jobsearchresults.map((result) => {
+                                this.state.github.map((result) => {
                                     return (
                                         <div className="item-click"  key={result.id}>
                                             <article>
@@ -115,8 +119,7 @@ class JobListing extends React.Component {
                                     <li><a href="#"><i className="fa fa-ellipsis-h"></i></a></li> 
                                     <li><a href="#"><i className="ti-arrow-right"></i></a></li> 
                                 </ul>
-                            </div>
-                            
+                            </div>  
                         </div>
                     </section>
             
@@ -180,30 +183,39 @@ class JobListing extends React.Component {
     }
 
     componentDidMount() {
-        const value = queryString.parse(this.props.location.search);
-        console.log("data: ", store.get("jobsearchresults"));
+        let parser = new Parser();
 
-        this.setState({
-            jobsearchresults: store.get("jobsearchresults")
-        });
+        (async () => {
+ 
+            let feed = await parser.parseURL("https://calm-spire-67840.herokuapp.com/" + "https://stackoverflow.com/jobs/feed");
+            console.log(feed);
 
-        fetch("https://calm-spire-67840.herokuapp.com/" + "https://jobs.github.com/positions.json")
-        .then((response) => {
-            return response.json();
-            //this.setState({showLoader: false})
-        })
-        .then((response) => {
             this.setState({
-                jobsearchresults: response
+                stackoverflow: feed
             });
 
-            store.set("jobsearchresults", response);
-        })
-        .catch((error) => {
-            this.setState({showLoader: false})
+            store.set("stackoverflow", feed);
 
-            console.log("error: ", error);
-        })
+            fetch("https://calm-spire-67840.herokuapp.com/" + "https://jobs.github.com/positions.json")
+            .then((response) => {
+                return response.json();
+                //this.setState({showLoader: false})
+            })
+            .then((response) => {
+
+                this.setState({
+                    github: response
+                });
+
+                store.set("github", response);
+            })
+            .catch((error) => {
+                //this.setState({showLoader: false})
+
+                console.log("error: ", error);
+            })
+            
+        })();
     }
 }
 
