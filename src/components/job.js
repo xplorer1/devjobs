@@ -115,6 +115,8 @@ class Job extends React.Component {
                                     <div className="row row-bottom mrg-0">
                                         <h2 className="detail-title">Job Responsibilities</h2>
                                         <p dangerouslySetInnerHTML={{__html: this.state.job.description}} />
+                                        <h2 className="detail-title">How to apply</h2>
+                                        <div dangerouslySetInnerHTML={{__html: this.state.job.how_to_apply}} />
                                     </div>
                                 </div>
                             </div>

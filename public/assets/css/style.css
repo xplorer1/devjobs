@@ -3254,7 +3254,7 @@ font-size:25px;
 	margin:10px auto;
 	height: 75px;
 	display:inline-block;
-	background: #f4f5f7;
+	/*background: #f4f5f7;*/
 	vertical-align: middle;
 	border-radius: 50%;
 	line-height: 75px;

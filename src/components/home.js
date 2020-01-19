@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import Parser from 'rss-parser';
 
 const Utilities = {
 	Footer: function () {
@@ -145,7 +146,7 @@ class Home extends React.Component {
 
 			                <div className="row">
 
-			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=remote">
+			                    {/*<Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=remote">
 			                        <div className="category-box" data-aos="fade-up">
 			                            <div className="category-desc">
 			                                <div className="category-icon">
@@ -154,11 +155,10 @@ class Home extends React.Component {
 
 			                                <div className="category-detail category-desc-text">
 			                                    <h4> <span >Remote Jobs</span></h4>
-			                                    {/*<p>122 Jobs</p>*/}
 			                                </div>
 			                            </div>
 			                        </div>
-			                    </Link>
+			                    </Link>*/}
 
 			                    <Link className="col-md-3 col-sm-6" to="/joblisting/?jobtype=reactjs">
 			                        <div className="category-box" data-aos="fade-up">
@@ -409,6 +409,58 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
+		if (!window.indexedDB) {
+		    console.log("Your browser doesn't support a stable version of IndexedDB. Some features will not be available.");
+		}
+
+		(async () => {
+			let parser = new Parser();
+ 
+            let feed = await parser.parseURL("https://calm-spire-67840.herokuapp.com/" + "https://stackoverflow.com/jobs/feed");
+
+  			const dbName = "StackOverFlowJobs";
+
+			let request = indexedDB.open(dbName, 1);
+
+			request.onerror = function(event) {
+			  // Handle errors.
+			};
+
+			//stackdb.onerror = function(event) {
+				// Generic error handler for all errors targeted at this database's
+				// requests!
+				//console.error("Database error: " + event.target.errorCode);
+			//};
+
+			request.onupgradeneeded = function(event) {
+				let stackdb = event.target.result;
+
+				// Create an objectStore to hold information about our customers. We're
+				// going to use "ssn" as our key path because it's guaranteed to be
+				// unique - or at least that's what I was told during the kickoff meeting.
+				let objectStore = stackdb.createObjectStore("jobs", { keyPath: "guid" });
+
+				// Create an index to search customers by name. We may have duplicates
+				// so we can't use a unique index.
+				objectStore.createIndex("name", "categories", { unique: false });
+
+				// Create an index to search customers by email. We want to ensure that
+				// no two customers have the same email, so use a unique index.
+				//objectStore.createIndex("email", "email", { unique: true });
+
+				// Use transaction oncomplete to make sure the objectStore creation is 
+				// finished before adding data into it.
+				objectStore.transaction.oncomplete = function(event) {
+				// Store values in the newly created objectStore.
+					let stackjobsstore = stackdb.transaction("jobs", "readwrite").objectStore("jobs");
+					feed.items.forEach(function(item) {
+					  	stackjobsstore.add(item);
+					});
+				};
+			};
+	            
+	        })();
+
 		setTimeout(function() {
 			console.log("state: ", this.state)
 			//this.setState({showLoader: false})

@@ -1,9 +1,13 @@
 import React from 'react';
-import {Link, withRouter} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {Utilities} from "./home";
-import queryString from "query-string";
 import store from "store";
-import Parser from 'rss-parser';
+
+function Loader() {
+    return (
+        <div className="Loader"></div>
+    )
+}
 
 class JobListing extends React.Component {
     constructor() {
@@ -14,14 +18,14 @@ class JobListing extends React.Component {
             stackoverflow: [],
             ajaxloading: false,
             fromstackoverflow: false,
-
+            showLoader: false
         }
     }
 
     render() {
         return (
             <article>
-                {/*<div className="Loader"></div>*/}
+                {this.state.showLoader === true && <Loader />}
                 <div className="wrapper">  
         
                     <Utilities.Nav />
@@ -109,7 +113,7 @@ class JobListing extends React.Component {
                                 })
                             }
                             
-                            <div className="row">
+                            {/*<div className="row">
                                 <ul className="pagination">
                                     <li><a href="#"><i className="ti-arrow-left"></i></a></li>
                                     <li className="active"><a href="#">1</a></li>
@@ -119,7 +123,7 @@ class JobListing extends React.Component {
                                     <li><a href="#"><i className="fa fa-ellipsis-h"></i></a></li> 
                                     <li><a href="#"><i className="ti-arrow-right"></i></a></li> 
                                 </ul>
-                            </div>  
+                            </div>  */}
                         </div>
                     </section>
             
@@ -183,39 +187,69 @@ class JobListing extends React.Component {
     }
 
     componentDidMount() {
-        let parser = new Parser();
+        this.setState({showLoader: true});
 
-        (async () => {
- 
-            let feed = await parser.parseURL("https://calm-spire-67840.herokuapp.com/" + "https://stackoverflow.com/jobs/feed");
-            console.log(feed);
+        const dbName = "StackOverFlowJobs";
 
+        let request = indexedDB.open(dbName, 1);
+
+        request.onerror = function(event) {
+            console.log("er: ", event);
+          // Handle errors.
+        };
+
+        request.onsuccess = function(event) {
+            let stackdb = event.target.result;
+
+            let transaction = stackdb.transaction(["jobs"]);
+            let objectStore = transaction.objectStore("jobs");
+            let request = objectStore.getAll();
+
+            request.onerror = function(event) {
+                console.log("Error reading from db: ", event.target);
+            };
+            request.onsuccess = function(event) {
+                if(event.target.result) {
+
+                    this.setState({
+                        stackoverflow: event.target.result,
+                        fromstackoverflow: true,
+                        showLoader: false
+                    });
+                }
+                
+                //console.log("Stack data " + JSON.stringify(event.target.result));
+            }.bind(this);
+        }.bind(this);
+
+        if(store.get("github")) {
             this.setState({
-                stackoverflow: feed
+                github: store.get("github"),
+                showLoader: false
             });
+        }
 
-            store.set("stackoverflow", feed);
-
+        else {
             fetch("https://calm-spire-67840.herokuapp.com/" + "https://jobs.github.com/positions.json")
-            .then((response) => {
-                return response.json();
-                //this.setState({showLoader: false})
-            })
-            .then((response) => {
+                .then((response) => {
+                    return response.json();
+                    this.setState({showLoader: false})
+                })
+                .then((response) => {
 
-                this.setState({
-                    github: response
-                });
+                    this.setState({
+                        github: response,
+                        showLoader: false
+                    });
 
-                store.set("github", response);
-            })
-            .catch((error) => {
-                //this.setState({showLoader: false})
+                    store.set("github", response);
+                })
+                .catch((error) => {
+                    this.setState({showLoader: false})
 
-                console.log("error: ", error);
-            })
-            
-        })();
+                    console.log("error: ", error);
+                })
+        }
     }
 }
 
